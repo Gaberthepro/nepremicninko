@@ -1,5 +1,6 @@
 class NepremicninesController < ApplicationController
   before_action :set_nepremicnine, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   # GET /nepremicnines or /nepremicnines.json
   def index
@@ -22,6 +23,7 @@ class NepremicninesController < ApplicationController
   # POST /nepremicnines or /nepremicnines.json
   def create
     @nepremicnine = Nepremicnine.new(nepremicnine_params)
+    @nepremicnine.user_id = current_user.id
 
     respond_to do |format|
       if @nepremicnine.save

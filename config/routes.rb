@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "/dsahbord" => 'dashboard#index', as: :dashboard
+  get 'dashboard/nepremicnines'
+  get 'dashboard/reports'
   resources :nepremicnines
   devise_for :users
   root to: 'public#main'
