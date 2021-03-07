@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nepremicnine.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @nepremicnine.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @nepremicnine.price %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @nepremicnine.rooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @nepremicnine.bathrooms %>
+</p>
+
+<%= link_to 'Edit', edit_nepremicnine_path(@nepremicnine) %> |
+<%= link_to 'Back', nepremicnines_path %>
