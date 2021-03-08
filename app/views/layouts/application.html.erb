@@ -14,14 +14,9 @@
   </head>
 
   <body>
-
   <header>
-  <% if ["public", "devise"].include?(controller.controller_name) %>
   <%= render "layouts/nav/public"%>
   </header>
-  <% else %>
-<%= render "layouts/nav/dashbord"%>
-  <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
