@@ -1,3 +1,12 @@
+<style>
+.s{
+  margin-left:500px;
+  margin-right:500px
+}
+</style>
+
+
+
 <%= form_with(model: nepremicnine, local: true) do |form| %>
   <% if nepremicnine.errors.any? %>
     <div id="error_explanation">
@@ -10,33 +19,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="s">
+  <div class="form-group">
+    <%= form.label :name %>:
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+  <div class="form-group">
+    <%= form.label :address %>:
+    <%= form.text_field :address, class: "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+  <div class="form-group">
+    <%= form.label :price %>:
+    <%= form.number_field :price, class: "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :rooms %>
-    <%= form.text_field :rooms %>
+  <div class="form-group">
+    <%= form.label :rooms %>:
+    <%= form.number_field :rooms, class: "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :bathrooms %>
-    <%= form.text_field :bathrooms %>
+  <div class="form-group">
+    <%= form.label :bathrooms %>:
+    <%= form.number_field :bathrooms, class: "form-control"  %><br>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" align=center>
+    <%= form.submit "Save",   class: "btn btn-lg  btn-success" %>
+  </div>
   </div>
 <% end %>

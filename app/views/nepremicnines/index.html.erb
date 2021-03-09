@@ -1,9 +1,12 @@
+<style>
+.t{
+ margin-left:10px;
+}
+</style>
+<div class=t>
 
-<p id="notice"><%= notice %></p>
-
-<h1>Nepremicnines</h1>
-
-<table>
+<h1>Nepremicnine</h1>
+<table class="table table-striped table-sm">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,12 +23,12 @@
       <tr>
         <td><%= nepremicnine.name %></td>
         <td><%= nepremicnine.address %></td>
-        <td><%= nepremicnine.price %></td>
+        <td><%= nepremicnine.price %>€</td>
         <td><%= nepremicnine.rooms %></td>
         <td><%= nepremicnine.bathrooms %></td>
-        <td><%= link_to 'Show', nepremicnine %></td>
-        <td><%= link_to 'Edit', edit_nepremicnine_path(nepremicnine) %></td>
-        <td><%= link_to 'Destroy', nepremicnine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', nepremicnine, class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_nepremicnine_path(nepremicnine), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', nepremicnine, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +36,5 @@
 
 <br>
 
-<%= link_to 'New Nepremicnine', new_nepremicnine_path %>
+<%= link_to 'Dodaj Nepremicnino', new_nepremicnine_path, class: "btn btn-success" %>
+<div>
