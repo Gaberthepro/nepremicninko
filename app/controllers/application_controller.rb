@@ -1,15 +1,12 @@
 class ApplicationController < ActionController::Base
-
-    before_action :configure_premitted_parameters, if: :devise_controller?
+    before_action :configure_permitted_parameters, if: :devise_controller?
 
     protected
-
-
-    def configure_premitted_parameters
-
-        devise_parameter_sanitizer.permit(:update, keys: [:first_name, :last_name, :url])
-        devise_parameter_sanitizer.permit(:sing_up, keys: [:first_name, :last_name])
-
+  
+    def configure_permitted_parameters
+      attributes = [:ime, :priimek,:username, :url]
+      devise_parameter_sanitizer.permit(:sign_up, keys: attributes)
+      devise_parameter_sanitizer.permit(:account_update, keys: attributes)
     end
 
 end

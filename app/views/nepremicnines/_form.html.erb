@@ -22,40 +22,43 @@
 <div class="s">
   <div class="form-group">
     <%= form.label :name %>:
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.text_field :name, class: "form-control", :required => true %>
   </div>
 
   <div class="form-group">
     <%= form.label :address %>:
-    <%= form.text_field :address, class: "form-control"  %>
+    <%= form.text_field :address, class: "form-control", :required => true  %>
   </div>
 
   <div class="form-group">
     <%= form.label :price %>:
-    <%= form.number_field :price, class: "form-control"  %>
+    <%= form.number_field :price, class: "form-control", "min" => 1, :required => true  %>
   </div>
 
   <div class="form-group">
     <%= form.label :rooms %>:
-    <%= form.number_field :rooms, class: "form-control"  %>
+    <%= form.number_field :rooms, class: "form-control", "min" => 1, :required => true %>
   </div>
 
   <div class="form-group">
     <%= form.label :bathrooms %>:
-    <%= form.number_field :bathrooms, class: "form-control"  %><br>
+    <%= form.number_field :bathrooms, class: "form-control", "min" => 1,  :required => true %>
   </div>
 
 
   <div class="form-group">
-  <%= form.label :photo %>
-  <%= form.file_field :photo, class: "form-control" %>
-  <%= form.hidden_field :photo_cache %>
+    <%= form.label :parking_spaces %>:
+    <%= form.number_field :parking_spaces, class: "form-control", "min" => 0 %>
+  </div>
 
 
+  <div class="form-group">
+    <%= form.label :photo %>:
+    <%= form.text_field :photo, class: "form-control", :required => true  %>
   </div>
 
   <div class="actions" align=center>
     <%= form.submit "Save",   class: "btn btn-lg  btn-success" %>
   </div>
-  </div>
+</div>
 <% end %>

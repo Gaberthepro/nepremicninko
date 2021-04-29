@@ -9,6 +9,9 @@ class NepremicninesController < ApplicationController
 
   # GET /nepremicnines/1 or /nepremicnines/1.json
   def show
+    @agent_name = @nepremicnine.user.ime
+    @agent_surname = @nepremicnine.user.priimek
+    @agent_email = @nepremicnine.user.email
   end
 
   # GET /nepremicnines/new
@@ -66,6 +69,6 @@ class NepremicninesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def nepremicnine_params
-      params.require(:nepremicnine).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
+      params.require(:nepremicnine).permit(:name, :address, :price, :rooms, :bathrooms, :parking_spaces ,:photo)
     end
 end
