@@ -20,6 +20,7 @@
 
   <tbody>
     <% @nepremicnines.each do |nepremicnine| %>
+    <%if current_user.id == nepremicnine.user.id %>
       <tr>
         <td><%= nepremicnine.name %></td>
         <td><%= nepremicnine.address %></td>
@@ -30,6 +31,7 @@
         <td><%= link_to 'Edit', edit_nepremicnine_path(nepremicnine), class: "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', nepremicnine, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

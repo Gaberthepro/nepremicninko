@@ -13,6 +13,7 @@ class NepremicninesController < ApplicationController
     @agent_surname = @nepremicnine.user.priimek
     @agent_email = @nepremicnine.user.email
     @agent_number = @nepremicnine.user.phone
+    @agent_id = @nepremicnine.user.id
   end
 
   # GET /nepremicnines/new
