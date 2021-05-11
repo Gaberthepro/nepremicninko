@@ -1,6 +1,10 @@
+
+
 <div class="" align=center>
+<img  style="border-radius: 50%; width:100px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eFD8ghPOiG8CpfCqmj0SBAHaGl%26pid%3DApi&f=1"><br>
+<label>Nepremiičninski Posrednik</label>
 <h3 class="h4"><%= @agent_name %> <%= @agent_surname %></h3>
-<button class="btn btn-info">Pokliči</button>
-<button class="btn btn-success">Kontaktiraj</button>
+<a href="tel:+386<%= @agent_number %>"><button class="btn btn-info">Pokliči</button></a>
+<a href="mailto:<%= @agent_email %>"> <button class="btn btn-success">Kontaktiraj</button></a>
 
 </div>
