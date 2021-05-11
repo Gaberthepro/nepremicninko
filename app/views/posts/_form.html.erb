@@ -10,25 +10,28 @@
       </ul>
     </div>
   <% end %>
+  <div style="margin:30px">
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :title %>:
+    <%= form.text_field :title, class: "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
+
+    <div class="form-group">
+     <%= form.label :url %>:
+    <%= form.text_field :url, class: "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :summary %>
-    <%= form.text_field :summary %>
+
+    <div class="form-group">
+     <%= form.label :summary %>:
+    <%= form.text_field :summary , class: "form-control", :required => true %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <div class="form-group">
+        <%= form.label :body %>:
+    <%= form.text_area :body, class: "form-control", :required => true %>
   </div>
 
   <div class="field">
@@ -39,4 +42,7 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>
+  </div>

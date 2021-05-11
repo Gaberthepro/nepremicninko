@@ -12,7 +12,7 @@
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
+        <a class="nav-link dropdown-toggle" href="/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <%= link_to "Moje nepremicnina", nepremicnines_path, class:"dropdown-item"%>
           <%= link_to "Edit account", edit_user_registration_path, class:"dropdown-item"%>
@@ -24,45 +24,23 @@
       </li>
       <% end %>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Najnovejše</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Išči</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+
 
 
         <li class="nav-item">
-        <a class="nav-link" href="#">Novice</a>
+        <%= link_to "Novice", posts_path, class:"nav-link"%>
         </li>
 
-        <li class="nav-item">
-        <a class="nav-link" href="#">Oglasi</a>
-        </li>
-
-        <% if user_signed_in? %>
-        <li class="nav-item">
-        <%= link_to "Odjava", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-        <% else %>
-        <li class="nav-item">
-        <%= link_to "Prijava", new_user_session_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-
-        <%= link_to "Registracija", new_user_registration_path, class: "nav-link" %>
-        </li>
-        <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <% if user_signed_in? %>
+        <%= link_to "Odjava", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+        <% else %>
+        <%= link_to "Prijava", new_user_session_path, class: "btn btn-success mr-2" %>
+
+
+        <%= link_to "Registracija", new_user_registration_path, class: "btn btn-secondary" %>
+        <% end %>
     </form>
   </div>
 </nav>
