@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_183539) do
+ActiveRecord::Schema.define(version: 2021_05_10_164944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_183539) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "parking_spaces", default: 0
+    t.text "details"
     t.index ["user_id"], name: "index_nepremicnines_on_user_id"
   end
 

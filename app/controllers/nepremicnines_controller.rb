@@ -69,6 +69,6 @@ class NepremicninesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def nepremicnine_params
-      params.require(:nepremicnine).permit(:name, :address, :price, :rooms, :bathrooms, :parking_spaces ,:photo)
+      params.require(:nepremicnine).permit(:name, :address, :price, :rooms, :bathrooms, :details, :parking_spaces ,:photo)
     end
 end

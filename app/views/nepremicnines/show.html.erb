@@ -47,31 +47,15 @@
     </div>
 
     <div class="row">
-     <div class="col-8">      
-      <p>
-          <strong>Name:</strong>
-          <%= @nepremicnine.name %>
-        </p>
+     <div class="col-8">
+     <h1><%= @nepremicnine.name %></h1>      
+      <h4>Opis</h4>
 
-        <p>
-          <strong>Address:</strong>
-          <%= @nepremicnine.address %>
-        </p>
 
-        <p>
-          <strong>Price:</strong>
-          <%= @nepremicnine.price %>
-        </p>
+        <div id="prop-details">
+          <%= simple_format @nepremicnine.details%>
+        </div>
 
-        <p>
-          <strong>Rooms:</strong>
-          <%= @nepremicnine.rooms %>
-        </p>
-
-        <p>
-          <strong>Bathrooms:</strong>
-          <%= @nepremicnine.bathrooms %>
-        </p>
     </div>
   <div class="col-4">
   <%= render "nepremicnines/agent_details"%>

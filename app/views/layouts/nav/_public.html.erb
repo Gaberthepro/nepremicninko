@@ -8,7 +8,16 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
       <% if user_signed_in? %>
-        <%= link_to "Dashboard", nepremicnines_path, class: "nav-link" %>
+        
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <%= link_to "Moje nepremicnina", nepremicnines_path, class:"dropdown-item"%>
+          <%= link_to "Edit account", edit_user_registration_path, class:"dropdown-item"%>
+        </div>
+      </li>
 
       <% else %>
         <a class="nav-link" href="/">Domov<span class="sr-only">(current)</span></a>
